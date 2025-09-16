@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JSQuizStarter</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="bouton-acceuil">
+        <p id="bienvenue">bienvenue sur le quiz javascript</p>
+        <button id="commencer" onclick="afficherQuestion()">commencer le quiz <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="quiz">
+            <div class="question">
+                <p id="question"></p>
+            </div>
+            <div class="reponses"></div>
+            <button id="valider" onclick="verifierReponse()">valider</button>
+            <button id="suivant" onclick="nextQuestion()">suivant</button>
+            <button id="retour">retour</button>
+            <button id="quitter">quitter</button>
+        </div>
+        <div class="resultat"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
+   
