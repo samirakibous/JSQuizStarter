@@ -6,7 +6,6 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -177,6 +176,81 @@
             border-color: #dc3545;
             background: linear-gradient(135deg, #f8d7da, #f5c6cb);
         }
+        .themes {
+  display: none; /* caché au départ */
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.themes h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.theme-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.theme-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(102,126,234,0.3);
+}
+.controlButtons {
+    display: none;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    background-color: transparent; /* pour voir le fond du quiz */
+}
+.controlButtons button {
+
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transition: all 0.3s ease;
+}
+.controlButtons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+.pseudo{
+    display: none;
+    ;
+}
+.quitter{
+    display:none;
+}
+.timer{
+    display: none;
+    /* height: 600px;
+    width: 600px;
+    background-color: #dc3545; */
+}
+
         @media (max-width: 768px) {
             #bienvenue {
                 font-size: 2.5rem;
