@@ -1,15 +1,15 @@
 const questions = [
     //JavaScript
     { question: "Comment déclare-t-on une variable ?", reponses: ["var x;", "let x;", "const x;"], correcte: [1, 2], theme: "javascript" },
-    // { question: "Quelle méthode transforme un objet en JSON ?", reponses: ["JSON.parse()", "JSON.stringify()", "Object.toJson()"], correcte: [1], theme: "javascript" },
-    // { question: "Comment écrit-on un commentaire sur une seule ligne ?", reponses: ["// commentaire", "/* commentaire */", "# commentaire"], correcte: [0], theme: "javascript" },
-    // { question: "Quel mot-clé permet de créer une fonction ?", reponses: ["function", "fun", "def"], correcte: [0], theme: "javascript" },
-    // { question: "Quel opérateur compare la valeur et le type ?", reponses: ["==", "===", "="], correcte: [1], theme: "javascript" },
-    // { question: "Comment vérifier le type d'une variable ?", reponses: ["typeOf x", "typeof x", "Type(x)"], correcte: [1], theme: "javascript" },
-    // { question: "Quel mot-clé permet de créer une classe ?", reponses: ["class", "function", "struct"], correcte: [0], theme: "javascript" },
-    // { question: "Comment interrompt-on une boucle ?", reponses: ["stop", "break", "exit"], correcte: [1], theme: "javascript" },
-    // { question: "Quel événement détecte un clic sur un bouton ?", reponses: ["onpress", "onclick", "onchange"], correcte: [1], theme: "javascript" },
-    // { question: "Comment crée-t-on un tableau ?", reponses: ["[]", "{}", "array()"], correcte: [0], theme: "javascript" },
+    { question: "Quelle méthode transforme un objet en JSON ?", reponses: ["JSON.parse()", "JSON.stringify()", "Object.toJson()"], correcte: [1], theme: "javascript" },
+    { question: "Comment écrit-on un commentaire sur une seule ligne ?", reponses: ["// commentaire", "/* commentaire */", "# commentaire"], correcte: [0], theme: "javascript" },
+    { question: "Quel mot-clé permet de créer une fonction ?", reponses: ["function", "fun", "def"], correcte: [0], theme: "javascript" },
+    { question: "Quel opérateur compare la valeur et le type ?", reponses: ["==", "===", "="], correcte: [1], theme: "javascript" },
+    { question: "Comment vérifier le type d'une variable ?", reponses: ["typeOf x", "typeof x", "Type(x)"], correcte: [1], theme: "javascript" },
+    { question: "Quel mot-clé permet de créer une classe ?", reponses: ["class", "function", "struct"], correcte: [0], theme: "javascript" },
+    { question: "Comment interrompt-on une boucle ?", reponses: ["stop", "break", "exit"], correcte: [1], theme: "javascript" },
+    { question: "Quel événement détecte un clic sur un bouton ?", reponses: ["onpress", "onclick", "onchange"], correcte: [1], theme: "javascript" },
+    { question: "Comment crée-t-on un tableau ?", reponses: ["[]", "{}", "array()"], correcte: [0], theme: "javascript" },
 
     //CSS 
     { question: "Comment change-t-on la couleur du texte ?", reponses: ["color", "background-color", "font-color"], correcte: [0], theme: "css" },
@@ -395,7 +395,11 @@ function pseudo() {
 
 function envoyerPseudo() {
     const pseudo = document.querySelector(".pseudo");
-    let pseudonameValue = pseudoname.value
+    let pseudonameValue = pseudoname.value.trim();
+    if (pseudonameValue === "") {
+        alert("Veuillez entrer un pseudo !");
+        return;
+    }
     localStorage.setItem("pseudoname", pseudonameValue);
     // afficherQuestion();
     // pseudobutton.style.display="none";
