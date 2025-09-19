@@ -17,8 +17,12 @@
         commencer le quiz <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
+    <div class="quitter">
+      <button id="quitter">quitter</button>
+    </div>
     <div class="timer">Temps restant : <span id="timer">15</span>s</div>
     <div class="pseudo">
+      <h1>Bienvenue ! Merci d'entrer votre pseudo pour commancer :</h1>
       <input type="text" name="pseudoname" id="pseudoname" />
       <button id="pseudobutton" onclick="envoyerPseudo()">envoyer</button>
     </div>
@@ -35,22 +39,19 @@
     <div class="quiz">
       <div class="question">
         <p id="question"></p>
+        <div class="question-counter" id="question-counter"></div>
       </div>
 
       <div class="reponses"></div>
     </div>
 
-    <div class ="controlButtons">
+    <div class="controlButtons">
       <button id="valider" onclick="verifierReponse()">valider</button>
       <button id="suivant" onclick="nextQuestion()">suivant</button>
-      <button id="retour">retour</button>
-     
-    </div>
-    <div class="quitter">
-      <button id="quitter">quitter</button>
     </div>
 
     <div class="resultat"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
